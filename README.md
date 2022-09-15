@@ -32,3 +32,4 @@ Everything is installed.
 - [D3 Official Documentation](https://github.com/d3/d3/wiki)
 - [D3 in Depth](https://www.d3indepth.com/introduction/)
 - [D3 for the Impatient](https://www.oreilly.com/library/view/d3-for-the/9781492046783/) - slightly out of date, but good for anybody who knows JS/TS, CSS and HTML and just wants to get straight to the meat.
+  ˘
