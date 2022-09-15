@@ -1,21 +1,26 @@
-import { useEffect, useRef } from 'react'
+import PageContainer from '@/components/PageContainer'
+import PageHeading from '@/components/PageHeading'
+import PageMain from '@/components/PageMain'
 import { select } from 'd3-selection'
+import { useEffect, useRef } from 'react'
 
-export default function HomePage () {
+export default function HomePage() {
   const svgRef = useRef<SVGSVGElement>(null)
+  const SVG_WIDTH = 600
+  const SVG_HEIGHT = 300
 
   useEffect(() => {
     const svg = select(svgRef.current)
 
     // React 18 will render this component twice in development due to strict mode.
     // So will be need to clear the contents of the SVG first
-    svg.selectAll('*')
-      .remove()
+    svg.selectAll('*').remove()
 
     const svgBbox = svgRef.current?.getBoundingClientRect()
 
     if (svgBbox) {
-      svg.append('text')
+      svg
+        .append('text')
         .attr('stroke', 'red')
         .attr('font-size', 30)
         .attr('text-anchor', 'middle')
@@ -23,22 +28,19 @@ export default function HomePage () {
         .attr('y', svgBbox.height / 2)
         .text('Hello World')
     }
-
   }, [])
 
   return (
-    <div className="container mx-auto max-w-3xl">
-      <header>
-        <h1 className="font-bold tracking-wider text-3xl">Home Page</h1>
-      </header>
-      <main className="pt-5">
+    <PageContainer>
+      <PageHeading>Home</PageHeading>
+      <PageMain>
         <svg
           ref={svgRef}
-          width={600}
-          height={300}
+          width={SVG_WIDTH}
+          height={SVG_HEIGHT}
           className="bg-slate-100"
         ></svg>
-      </main>
-    </div>
+      </PageMain>
+    </PageContainer>
   )
 }

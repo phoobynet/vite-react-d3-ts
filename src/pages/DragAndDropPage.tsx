@@ -1,3 +1,6 @@
+import PageContainer from '@/components/PageContainer'
+import PageHeading from '@/components/PageHeading'
+import PageMain from '@/components/PageMain'
 import { Selection, pointer } from 'd3'
 import { drag } from 'd3-drag'
 import { select } from 'd3-selection'
@@ -9,12 +12,12 @@ interface Circle {
   fill: string
 }
 
-export default function DragAndDrop() {
+export default function DragAndDropPage() {
   const svgRef = useRef<SVGSVGElement>(null)
-  const svgWidth = 600
-  const svgHeight = 300
+  const SVG_WIDTH = 600
+  const SVG_HEIGHT = 300
   const circleRadius = 30
-  const y = svgHeight / 2
+  const y = SVG_HEIGHT / 2
   const circleData = useRef<Circle[]>([
     {
       x: 100,
@@ -74,16 +77,16 @@ export default function DragAndDrop() {
   }, [])
 
   return (
-    <div className="container mx-auto max-w-3xl">
-      <header className="py-4">
-        <h1 className="text-3xl font-bold tracking-wider">Drag and Drop</h1>
-      </header>
-      <svg
-        ref={svgRef}
-        width={svgWidth}
-        height={svgHeight}
-        className="bg-slate-100"
-      ></svg>
-    </div>
+    <PageContainer>
+      <PageHeading>Drag and Drop</PageHeading>
+      <PageMain>
+        <svg
+          ref={svgRef}
+          width={SVG_WIDTH}
+          height={SVG_HEIGHT}
+          className="bg-slate-100"
+        ></svg>
+      </PageMain>
+    </PageContainer>
   )
 }

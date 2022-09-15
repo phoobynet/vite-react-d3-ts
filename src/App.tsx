@@ -1,5 +1,6 @@
-import DragAndDrop from '@/pages/DragAndDrop'
+import DragAndDropPage from '@/pages/DragAndDropPage'
 import HomePage from '@/pages/HomePage'
+import TransitionsPage from '@/pages/TransitionsPage'
 import { Route, Routes } from 'react-router-dom'
 
 export default function App() {
@@ -11,7 +12,11 @@ export default function App() {
       />
       <Route
         path="/drag-and-drop"
-        element={<DragAndDrop />}
+        element={<DragAndDropPage />}
+      />
+      <Route
+        path="/transitions"
+        element={<TransitionsPage />}
       />
     </Routes>
   )
