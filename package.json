@@ -1,0 +1,42 @@
+{
+  "name": "vite-react-d3-tw",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Template repository for D3 and React",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3": "^7.6.1",
+    "daisyui": "^2.27.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.0",
+    "tailwind-scrollbar": "^2.0.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/d3": "^7.4.0",
+    "@types/lodash": "^4.14.185",
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "autoprefixer": "^10.4.11",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
