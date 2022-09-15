@@ -19,7 +19,7 @@ Also, yep, but with [Prettier](https://prettier.io/), and using the [JavaScript 
 # Lint Staged
 
 - [Prettier Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
-- [Github - Lint Staged](https://github.com/okonet/lint-staged)
+- [GitHub - Lint Staged](https://github.com/okonet/lint-staged)
 
 # Themes
 
