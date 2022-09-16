@@ -53,7 +53,10 @@ export default function LineMaker() {
       .attr('cy', (d) => d[1])
 
     // Example of bypassing a data point, and not drawing a line to it or from it.
-    const lineMaker = d3.line().defined((d, i) => i !== 3)
+    const lineMaker = d3
+      .line()
+      .defined((d, i) => i !== 3)
+      .curve(d3.curveCatmullRom.alpha(0.5))
 
     // not necessary to supply accessor functions because the array is already in the right format
     // lineMaker.x((d) => d[0])
@@ -71,7 +74,8 @@ export default function LineMaker() {
       <PageDescription>
         Draw a line using the an SVG <code>path</code> by creating a{' '}
         <code>d3.lineMaker</code>. Also, we can skip part of a line, but
-        excluding a data point going to or coming from it.
+        excluding a data point going to or coming from it. In addition, a curve
+        factory is used to create a curve function.
       </PageDescription>
       <PageMain>
         <svg
