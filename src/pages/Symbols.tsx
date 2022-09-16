@@ -91,6 +91,7 @@ export default function Symbols() {
        * 1. Create objects only at the origin
        * 2. Apply the desired scaling and rotations while the object is still at the origin
        * 3. Only then move (translate) the object to its intended location
+       * 4. Group multiple elements together and apply the same transform to the group
        */
       .attr(
         'transform',

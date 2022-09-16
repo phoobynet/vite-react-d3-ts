@@ -1,5 +1,6 @@
 import DragAndDropPage from '@/pages/DragAndDropPage'
 import HomePage from '@/pages/HomePage'
+import LineMaker from '@/pages/LineMaker'
 import LissajousCurve from '@/pages/LissajousCurve'
 import Symbols from '@/pages/Symbols'
 import TransitionsPage from '@/pages/TransitionsPage'
@@ -32,6 +33,10 @@ export default function App() {
       <Route
         path="/symbols"
         element={<Symbols />}
+      />
+      <Route
+        path="/line-maker"
+        element={<LineMaker />}
       />
     </Routes>
   )
