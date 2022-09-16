@@ -27,9 +27,15 @@ export default function Voters() {
     const svg = select(svgRef.current)
     svg.selectAll('*').remove()
 
-    const n = 50
-    const w = 300 / n
-    const dt = 3_000
+    // the size of each rect
+    const n = 30
+
+    // the number of rects
+    const w = SVG_WIDTH / n
+
+    // the timer interval
+    const dt = 2_000
+
     const data: DataItem[] = range(n * n).map((d) => {
       return {
         x: d % n,
