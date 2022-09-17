@@ -11,12 +11,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@react-hook/resize-observer": "^1.2.6",
     "d3": "^7.6.1",
     "daisyui": "^2.27.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.0",
+    "react-use": "^17.4.0",
     "tailwind-scrollbar": "^2.0.1"
   },
   "devDependencies": {
