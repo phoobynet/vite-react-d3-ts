@@ -10,8 +10,8 @@ interface SVGLineElementOpacity extends SVGLineElement {
 }
 
 export default function LissajousCurve() {
-  const svgRef = useRef<SVGSVGElement>(null)
   const lTimer = useRef<Timer>()
+  const svgRef = useRef<SVGSVGElement>(null)
   const SVG_WIDTH = 600
   const SVG_HEIGHT = 300
 
@@ -24,10 +24,11 @@ export default function LissajousCurve() {
       lTimer.current = undefined
     }
 
-    let a = 3.2
-    let b = 5.9
+    const a = 3.2
+    const b = 5.9
 
     let phi,
+      // eslint-disable-next-line prefer-const
       omega = (2 * Math.PI) / 10_000
 
     let crrX = 250
